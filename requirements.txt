@@ -1,1 +1,4 @@
 dbt-bigquery==1.6.1
+grpcio-gcp==0.2.2
+grpcio-status==1.45.0
+grpcio==1.45.0

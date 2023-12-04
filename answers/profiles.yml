@@ -1,4 +1,5 @@
-answers: # this needs to match the profile: in your dbt_project.yml file
+answers:  
+ # this needs to match the profile: in your dbt_project.yml file
   target: dev # The default for any dbt commands
   outputs:
     dev:
@@ -6,7 +7,7 @@ answers: # this needs to match the profile: in your dbt_project.yml file
       method: oauth
       # To use this, first run (in your terminal): export BIGQUERY_PROJECT="your_project_name"
       # Then dbt will recognise the variable
-      database: "{{ env_var('BIGQUERY_PROJECT') }}"
+      database:   "dbt-course-406811"   # was database: "{{ env_var('BIGQUERY_PROJECT')  }}"  !!!!!!!!!!!!!!!!!!!!!!! "dbt-course-406811"
       schema: dbt_test # Replace this with dbt_your_name, e.g. dbt_bob
       threads: 64 # Max number of concurrent things running at once
       timeout_seconds: 300
@@ -17,7 +18,7 @@ answers: # this needs to match the profile: in your dbt_project.yml file
     production:
       type: bigquery
       method: oauth
-      database: "{{ env_var('BIGQUERY_PROJECT') }}"
+      database:   "dbt-course-406811"  #     "{{ env_var('DBT_BIGQUERY_PROJECT')  }}"
       schema: dbt_production
       threads: 64
       timeout_seconds: 300
